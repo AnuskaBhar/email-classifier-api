@@ -25,7 +25,7 @@ class EmailClassifier:
         
         # Encode labels
         texts = df["text"].tolist()
-        labels = self.label_encoder.transform(df["label"].tolist())
+        labels = self.label_encoder.transform(df["type"].tolist())
         
         return Dataset.from_dict({
             "text": texts,
